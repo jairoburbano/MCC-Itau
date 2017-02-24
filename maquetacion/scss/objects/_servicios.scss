@@ -1,0 +1,70 @@
+/*------------------------------------*\
+$SERVICIOS
+\*------------------------------------*/
+.page-servicios {
+    padding-top: 20px;
+    @include respond-to(tablet) {
+        padding-top: 40px;
+    }
+    @include respond-to(desktop) {
+        padding-top: 60px;
+    }
+    .content {
+        @include respond-to(tablet) {
+            width: 590px;
+            margin: auto;
+        }
+    }
+}
+.container--servicios {
+    padding-top: 15px;
+    @include respond-to(tablet) {
+        padding-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        padding-bottom: 40px;
+    }
+    @include respond-to(desktop) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+.servicios__item {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin-bottom: 20px;
+    @include respond-to(tablet) {
+        width: calc(33.333% - 18px);
+        justify-content: flex-start;
+        align-items: center;
+        flex-flow: column wrap;
+        margin-bottom: 0;
+    }
+}
+.servicios__icon {
+    width: 48px;
+    height: 48px;
+    @include respond-to(tablet) {
+        width: 96px;
+        height: 96px;
+        margin-bottom: 20px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.servicios__content {
+    width: calc(100% - 48px);
+    padding-left: 10px;
+    @include respond-to(tablet) {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+    p {
+        color: $darkgray;
+    }
+}

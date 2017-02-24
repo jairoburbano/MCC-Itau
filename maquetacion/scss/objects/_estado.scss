@@ -1,0 +1,95 @@
+/*------------------------------------*\
+$ESTADO
+\*------------------------------------*/
+.estado {
+    .wrap {
+        position: relative;
+        max-width: cr(780px);
+    }
+    .header--top {
+        @include respond-to(tablet) {
+            background: url(../img/header-mobile.svg) left top repeat-x white;
+            background-size: 15px 60px;
+            border-bottom: 2px solid $main;
+        }
+        .header__wrap {
+            padding-right: 10px;
+            @include respond-to(tablet) {
+                height: 60px;
+            }
+        }
+    }
+    .title {
+        @include font-size(28px, 30px);
+    }
+    .estado__icono {
+        position: absolute;
+        bottom: -110px;
+        left: 0;
+    }
+}
+.estado__box {
+    width: 570px;
+    margin: auto;
+    color: $darkgray;
+    @include font-size(12px, 13px);
+    hr {
+        margin: 5px 0;
+        background: $darkgray;
+    }
+}
+.estado__title {
+    @include font-size(12px, 14px);
+    color: $secundario;
+    font-weight: 600;
+    width: 100%;
+    border-bottom: 1px solid $gray;
+    padding: 10px;
+    span {
+        font-weight: 400;
+    }
+}
+.estado__column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 570px;
+    padding: 10px;
+    background: $lightgray;
+    &:nth-of-type(2n) {
+        background: white;
+    }
+    &:last-child {
+        border-bottom: 1px solid $gray;
+    }
+}
+.estado__column__title {
+    width: 140px;
+    font-weight: 600;
+}
+.estado--space {
+
+}
+.estado__divisor {
+    width: 165px;
+    text-align: center;
+}
+.divisor__item {
+
+}
+.estado__number {
+    width: 73px;
+    .divisor__item {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        text-align: right;
+    }
+    span {
+        font-weight: 600;
+    }
+}
+.estado__resultado {
+    width: 70px;
+}

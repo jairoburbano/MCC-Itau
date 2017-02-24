@@ -1,0 +1,19 @@
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In  -->
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="47px" height="47px" viewBox="0 0 47 47" enable-background="new 0 0 47 47" xml:space="preserve">
+<defs>
+	<symbol  id="icon_x5F_bank" viewBox="-23.5 -23.5 47 47">
+		<g>
+			<path fill="#FF5900" d="M21.3-19.2h-42.7c-1.2,0-2.1-1-2.1-2.1c0-1.2,1-2.1,2.1-2.1h42.7c1.2,0,2.1,1,2.1,2.1
+				C23.5-20.2,22.5-19.2,21.3-19.2z"/>
+			<path fill="#F0F0EF" d="M-18.7-11.7c-1.2,0-2.1-1-2.1-2.1c0-1.2,1-2.1,2.1-2.1h37.4c1.2,0,2.1,1,2.1,2.1c0,1.2-1,2.1-2.1,2.1
+				h-0.5V4.6h0.5c0.6,0,1.1,0.5,1.1,1.1s-0.5,1.1-1.1,1.1h-37.4c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1h0.5v-16.2L-18.7-11.7
+				L-18.7-11.7z M13.9,4.6v-16.2H7.5V4.6H13.9z M3.2,4.6v-16.2h-6.4V4.6H3.2z M-13.9,4.6h6.4v-16.2h-6.4V4.6z"/>
+			<path fill="#F0F0EF" d="M-21.4,9.6h42.7c0,0,0,0,0,0c1.2,0,2.1,1,2.1,2.1c0,0.9-0.6,1.7-1.4,2L0.9,23.3c-0.6,0.2-1.2,0.2-1.8,0
+				l-21.4-9.6c-0.9-0.4-1.4-1.4-1.2-2.4C-23.2,10.3-22.4,9.6-21.4,9.6z"/>
+		</g>
+	</symbol>
+</defs>
+<use xlink:href="#icon_x5F_bank"  width="47" height="47" x="-23.5" y="-23.5" transform="matrix(1 0 0 -1 23.5005 23.4892)" overflow="visible"/>
+</svg>

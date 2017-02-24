@@ -1,0 +1,383 @@
+/*------------------------------------*\
+$MERCADO
+\*------------------------------------*/
+.page-template-template-indices {
+    .footer__column, .footer__links, .footer > .footer__wrap {
+        display: none;
+    }
+    @include sticky(32px, page-wrap, footer);
+    @include respond-to(tablet) {
+        @include sticky(32px, page-wrap, footer);
+    }
+    @include respond-to(desktop) {
+        @include sticky(32px, page-wrap, footer);
+    }
+    .header__indice {
+        display: block;
+        width: 120px;
+        @include respond-to(tablet) {
+            width: 170px;
+        }
+    }
+    .header--top {
+        @include respond-to(tablet) {
+            background: url(../img/header-mobile.svg) left top repeat-x white;
+            background-size: 15px 60px;
+            border-bottom: 2px solid $main;
+        }
+        .header__wrap {
+            padding-right: 10px;
+            @include respond-to(tablet) {
+                height: 60px;
+            }
+        }
+    }
+    .header--bottom {
+        display: none;
+    }
+    .header__icon {
+        display: none;
+    }
+}
+.indices__box {
+    margin-bottom: 30px;
+    @include respond-to(desktop) {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        margin-bottom: 40px;
+    }
+}
+.indices__container {
+    color: $darkgray;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    position: relative;
+    @include font-size(16px, 32px);
+    border-bottom: 1px solid $gray;
+    margin-bottom: 62px;
+    align-items: flex-start;
+    align-content: flex-start;
+    transition: all $time;
+    @include respond-to(tablet) {
+        max-width: 590px;
+        width: 100%;
+        margin: 0 auto 62px;
+    }
+    @include respond-to(desktop) {
+        width: calc(50% - 12px);
+        margin: 0 0 62px;
+    }
+    &.container--open {
+        margin-bottom: 30px;
+        @include respond-to(tablet) {
+            margin: 0 auto 30px;
+        }
+        @include respond-to(desktop) {
+            margin: 0 0 30px;
+        }
+    }
+//    &:last-of-type {
+//        margin-bottom: 40px;
+//    }
+    .title {
+        @include font-size(18px, 22px);
+        font-weight: 600;
+        color: $secundario;
+        margin: 0;
+        height: 22px;
+        width: 100%;
+        @include respond-to(tablet) {
+            text-align: left;
+            @include font-size(18px, 32px);
+            border-bottom: 1px solid $gray;
+            height: 32px;
+        }
+    }
+    .flex-control-nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        top: 22px;
+        left: 0;
+        height: 32px;
+        li {
+            overflow: hidden;
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+            a {
+                color: $lightgray;
+                @include font-size(8px, 8px);
+                width: 10px;
+                height: 10px;
+                display: block;
+                border: 1px solid $gray;
+                background: $lightgray;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 4px;
+                    height: 4px;
+                    top: 2px;
+                    left: 2px;
+                    background: $secundario;
+                    opacity: 0;
+                    transition: all $time;
+                }
+                &.flex-active {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .flex-direction-nav {
+        width: 64px;
+        display: flex;
+        justify-content: flex-end;
+        flex-flow: row wrap;
+        position: absolute;
+        top: 22px;
+        right: 0;
+        a {
+            width: 32px;
+            height: 32px;
+            border: 1px solid $gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &.flex-prev {
+                border-right: 0;
+            }
+        }
+        svg {
+            width: 7px;
+            height: 11px;
+            color: $darkgray;
+        }
+    }
+}
+.container__lightbox {
+    margin: 0 auto !important;
+    width: 100% !important;
+    @include respond-to(tablet) {
+        margin: 0 auto;
+    }
+    @include respond-to(desktop) {
+        margin: 0 auto;
+    }
+    .js-more {
+        display: none;
+    }
+    .item-hide {
+        display: block;
+    }
+}
+.slide__controls {
+    height: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $gray;
+    @include respond-to(tablet) {
+        display: none;
+    }
+}
+.indices__head {
+    font-weight: 600;
+    @include font-size(14px, 32px);
+    height: 32px;
+    padding-left: 10px;
+}
+.indices__title {
+    width: 50%;
+    @include respond-to(tablet) {
+        width: 30%;
+    }
+}
+.indices__title__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+    background: white;
+    height: 32px;
+    &:nth-of-type(2n) {
+        background: $lightgray;
+    }
+    svg {
+        width: 11px;
+        height: 7px;
+        fill: $main;
+        transition: all $time;
+        margin-right: 10px;
+    }
+}
+.indice__title--baja {
+    svg {
+        fill: $secundario;
+        transform: rotate(180deg);
+    }
+}
+.indices__content {
+    width: 50%;
+    @include respond-to(tablet) {
+        width: 70%;
+        .slides {
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row wrap;
+        }
+    }
+    .indices__head {
+        padding-left: 0;
+        padding-right: 10px;
+        text-align: right;
+    }
+}
+.indices__block {
+    @include respond-to(tablet) {
+        flex: auto;
+    }
+}
+.indices__content__item {
+    background: white;
+    height: 32px;
+    text-align: right;
+    padding-right: 10px;
+    &:nth-of-type(2n) {
+        background: $lightgray;
+    }
+}
+.indice--baja {
+    color: $secundario;
+}
+.indices__flex {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    border-bottom: 0;
+}
+.indices__column {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    width: 100%;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $gray;
+    position: relative;
+    @include respond-to(tablet) {
+        width: calc(50% - 12px);
+        margin: 0;
+    }
+    .title {
+        width: 100%;
+    }
+    .indices__title {
+        width: 33.333%;
+    }
+    .indices__content {
+        width: 66.666%;
+        ul {
+            display: flex;
+            justify-content: center;
+            flex-flow: row wrap;
+            li {
+                width: 50%;
+            }
+        }
+    }
+}
+.item-hide {
+    display: none;
+}
+.js-more {
+    @include font-size(14px, 20px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100px;
+    position: absolute;
+    bottom: -32px;
+    right: 0;
+    cursor: pointer;
+    transition: all $time;
+    .no-touch & {
+        &:hover {
+            color: $secundario;
+            .more__icon {
+                border-color: $secundario;
+                background: $secundario;
+                color: white;
+            }
+        }
+    }
+}
+.more__icon {
+    width: 32px;
+    height: 32px;
+    border: 1px solid $gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include font-size(18px, 32px);
+    margin-left: 10px;
+    transition: border $time;
+}
+.mercado__lightbox {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba($main, .9);
+    z-index: $level10;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.mercado__container {
+    @include center;
+    position: relative;
+    max-width: calc(100% - 40px);
+    padding: 30px 0;
+    background: white;
+    @include respond-to(tablet) {
+        width: 590px;
+    }
+}
+.mercado__close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    .no-touch & {
+        &:hover {
+            svg {
+                fill: $secundario;
+            }
+        }
+    }
+    svg {
+        width: 20px;
+        height: 18px;
+        fill: $main;
+        transition: all $time;
+    }
+}
+.mercado__content {
+    padding: 0 30px 0 30px;
+    max-height: 600px;
+    width: 100%;
+    width: auto;
+    height: auto;
+    overflow-y: auto;
+    margin: auto;
+    @include respond-to(tablet) {
+        width: 590px;
+    }
+}

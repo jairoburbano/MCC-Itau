@@ -1,0 +1,439 @@
+/*------------------------------------*\
+$HEADER
+\*------------------------------------*/
+.header {
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    z-index: $level9;
+}
+.header--top {
+    background: url(../img/header-mobile.svg) left top repeat-x white;
+    background-size: 15px 60px;
+    @include respond-to(tablet) {
+        background: white;
+    }
+    .header__wrap {
+        height: 60px;
+        border-bottom: 2px solid $main;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px 0 10px;
+        flex-flow: row wrap;
+        max-width: cr(1280px);
+        width: 100%;
+        margin: auto;
+        @include respond-to(tablet) {
+            height: 80px;
+            border-bottom: 0;
+            padding: 0 20px;
+        }
+    }
+}
+.header__logo {
+    width: 164px;
+    height: 30px;
+    display: block;
+    @include respond-to(tablet) {
+        width: 208px;
+        height: 38px;
+    }
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+.header__icon {
+    display: block;
+    width: 24px;
+    height: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column wrap;
+    position: relative;
+    @include respond-to(tablet) {
+        display: none;
+    }
+    &.active {
+        width: 20px;
+        height: 20px;
+        span {
+            width: 26.5px;
+        }
+        span:first-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: top left;
+        }
+        span:nth-child(2) {
+            opacity: 0;
+            position: absolute;
+            top: calc(50% - 1px);
+            left: 0;
+        }
+        span:last-child {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: rotate(-45deg);
+            transform-origin: bottom left;
+        }
+    }
+    span {
+        width: 100%;
+        height: 2px;
+        background: $main;
+        transition: all $time;
+    }
+}
+.header__logo--secundario {
+    display: none;
+    width: 97px;
+    height: 30px;
+    @include respond-to(tablet) {
+        display: block;
+        width: 123px;
+        height: 38px;
+    }
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+.header--bottom {
+    background: $main;
+    display: none;
+    @include respond-to(tablet) {
+        background: url(../img/header.svg) left top repeat-x $main;
+        display: block;
+    }
+    &.menu__iphone {
+        .header__container {
+            min-height: calc(100vh - 124px);
+        }
+    }
+    a {
+        color: white;
+    }
+    svg {
+        fill: white;
+    }
+    .header__wrap {
+        max-width: cr(1280px);
+        margin: auto;
+        height: calc(100vh - 60px);
+        color: white;
+        overflow-y: auto;
+        @include respond-to(tablet) {
+            height: 40px;
+            overflow: visible;
+        }
+    }
+}
+.header__container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    min-height: calc(100vh - 60px);
+    overflow: hidden;
+    @include respond-to(tablet) {
+        min-height: 40px;
+        height: 40px;
+        flex-flow: row;
+        overflow: visible;
+        width: 100%;
+    }
+}
+.menu {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    @include respond-to(tablet) {
+        flex-flow: row wrap;
+        height: 100%;
+        width: 360px;
+        padding-left: 10px;
+    }
+    @include respond-to(desktop) {
+        width: calc(100% - 415px);
+    }
+    .ie10 & {
+        display: block !important;
+    }
+    .menu-item {
+        text-transform: uppercase;
+        font-weight: 600;
+        @include font-size(14px, 38px);
+        padding: 0 20px;
+        margin-bottom: 10px;
+        @include respond-to(tablet) {
+            margin-bottom: 0;
+            background-color: transparent;
+            padding: 0 8px;
+            position: relative;
+            &::after {
+                content: '';
+                background-color: transparent;
+                width: calc(100% - 20px);
+                position: absolute;
+                bottom: -2px;
+                left: 10px;
+                height: 4px;
+                transition: all $time;
+            }
+        }
+        @include respond-to(desktop) {
+            padding: 0 20px;
+            height: 40px;
+            display: block;
+        }
+        .ie10 & {
+            display: inline-block !important;
+        }
+        &.current-menu-item, &.current-page-ancestor {
+            background: $secundario;
+            @include respond-to(tablet) {
+                background-color: transparent;
+                &::after {
+                    background: $secundario;
+                }
+            }
+        }
+        &:hover {
+            @include respond-to(desktop) {
+                &::after {
+                    background: $secundario;
+                }
+            }
+        }
+    }
+}
+.submenu {
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    border-top: 1px solid rgba(#f0f0ef, .1);
+    margin-top: 160px;
+    color: #dad9d7;
+    .ie10 & {
+        display: block;
+        vertical-align: top !important;
+    }
+    a {
+        color: #dad9d7;
+    }
+    @include respond-to(tablet) {
+        margin-top: 0;
+        border-top: 0;
+        height: 40px;
+        width: calc(100% - 360px);
+        max-width: 400px;
+        padding-right: 20px;
+    }
+    @include respond-to(desktop) {
+        max-width: 425px;
+    }
+}
+.header__client {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 50px;
+    border-top: 1px solid rgba(#f0f0ef, .1);
+    padding: 15px 20px 0;
+    cursor: pointer;
+    @include respond-to(tablet) {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        width: auto;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 0;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 4px;
+            width: 100%;
+            background: transparent;
+            transition: all $time;
+        }
+    }
+    .ie10 & {
+        display: inline-block !important;
+    }
+    &.active {
+        @include respond-to(tablet) {
+            position: relative;
+            &::after {
+                background: $secundario;
+            }
+        }
+    }
+    span {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 10px;
+        @include respond-to(tablet) {
+            margin-bottom: 0;
+            line-height: cr(40px)
+        }
+    }
+    svg {
+        width:10px;
+        height: 6px;
+        margin-left: 5px;
+        margin-top: 2px;
+    }
+}
+.header__client__box {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column wrap;
+    padding: 0 10px;
+    @include respond-to(tablet) {
+        position: absolute;
+        left: -10px;
+        top: 40px;
+        width: 190px;
+        background: $main;
+        padding: 10px;
+        display: none;
+    }
+    .menu-item {
+        height: 38px;
+        line-height: cr(38px);
+        transition: all $time;
+        display: block;
+        @include respond-to(tablet) {
+            height: 27px;
+            line-height: cr(27px);
+            &:hover {
+                padding-left: 10px;
+                color: white;
+            }
+        }
+        @include respond-to(desktop) {
+            height: 40px;
+            display: block;
+        }
+    }
+    .current-menu-item {
+        @include respond-to(tablet) {
+            padding-left: 10px;
+            color: white;
+        }
+    }
+}
+.header__lang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .ie10 & {
+        display: inline-flex !important;
+        vertical-align: top !important;
+        height: 40px !important;
+    }
+    span {
+        display: none;
+        @include respond-to(tablet) {
+            display: block;
+        }
+    }
+    a {
+        width: 50px;
+        height: 50px;
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid rgba(#f0f0ef, .1);
+        transition: all $time;
+        @include respond-to(tablet) {
+            border-right: 0;
+            width: auto;
+            height: auto;
+            padding: 0 5px;
+            line-height: 16px;
+            &:first-of-type {
+                position: relative;
+                &::after {
+                    content: '';
+                    height: 100%;
+                    width: 1px;
+                    background: #dad9d7;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    opacity: .8;
+                }
+            }
+            &:hover {
+                color: white;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.header__trabaja {
+    height: 50px;
+    line-height: cr(50px);
+    padding-right: 20px;
+    width: calc(100% - 100px);
+    text-align: right;
+    @include respond-to(tablet) {
+        height: 40px;
+        line-height: cr(40px);
+        padding-right: 0;
+        position: relative;
+        width: auto;
+        &::after {
+            content: '';
+            background-color: transparent;
+            width: 100%;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            height: 4px;
+            transition: all $time;
+        }
+    }
+    .ie10 & {
+        display: inline-block;
+        vertical-align: top !important;
+        height: 40px !important;
+    }
+    &.current-menu-item {
+        background: $secundario;
+        @include respond-to(tablet) {
+            background-color: transparent;
+            &::after {
+                background: $secundario;
+            }
+        }
+    }
+    &:hover {
+        @include respond-to(tablet) {
+            &::after {
+                background: $secundario;
+            }
+        }
+    }
+}
+.header__indice.btn--fill {
+    display: none;
+}

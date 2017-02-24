@@ -1,0 +1,20 @@
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In  -->
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+<defs>
+	<symbol  id="icon_x5F_graph" viewBox="-14.4 -14.5 28 28">
+		<g>
+			<path fill="#FF5900" d="M13.6-13.9c0-0.3-0.2-0.6-0.6-0.6h-26.9c-0.3,0-0.6,0.2-0.6,0.6v1.9c0,0.3,0.2,0.6,0.6,0.6H13
+				c0.3,0,0.6-0.2,0.6-0.6V-13.9z"/>
+		</g>
+		<path fill="#F0F0EF" d="M-6.4,2.1c0,0.3-0.2,0.5-0.5,0.5H-9c-0.3,0-0.5-0.2-0.5-0.5V-8c0-0.3,0.2-0.5,0.5-0.5h2.1
+			c0.3,0,0.5,0.2,0.5,0.5V2.1z"/>
+		<path fill="#F0F0EF" d="M1.6,7.1c0,0.3-0.2,0.5-0.5,0.5H-1c-0.3,0-0.5-0.2-0.5-0.5V-8c0-0.3,0.2-0.5,0.5-0.5h2.1
+			c0.3,0,0.5,0.2,0.5,0.5V7.1z"/>
+		<path fill="#F0F0EF" d="M9.6,13.1c0,0.3-0.2,0.5-0.5,0.5H7c-0.3,0-0.5-0.2-0.5-0.5V-8c0-0.3,0.2-0.5,0.5-0.5h2.1
+			c0.3,0,0.5,0.2,0.5,0.5V13.1z"/>
+	</symbol>
+</defs>
+<use xlink:href="#icon_x5F_graph"  width="28" height="28" x="-14.4" y="-14.5" transform="matrix(1 0 0 -1 14.439 13.5499)" overflow="visible"/>
+</svg>

@@ -1,0 +1,112 @@
+/*------------------------------------*\
+$BANNER
+\*------------------------------------*/
+.banner {
+    width: 100%;
+    height: 180px;
+    position: relative;
+    display: block;
+    @include respond-to(tablet) {
+        height: 320px;
+    }
+    @include respond-to(desktop) {
+        @include aspect-ratio(120, 32);
+        height: auto;
+    }
+    &.banner-object-fit {
+        background-size: cover;
+        background-position: center center;
+        .banner__media {
+            opacity: 0;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(218,218,215,1);
+        background: linear-gradient(to right, rgba(218,218,215,1) 0%, rgba(0,57,93,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dadad7', endColorstr='#00395d', GradientType=1 );
+        z-index: $level2;
+        opacity: .5;
+    }
+    .content {
+        height: 100%;
+        @include respond-to(desktop) {
+            height: auto;
+        }
+    }
+}
+.banner__media {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: $level1;
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+}
+.banner__home {
+    height: 380px;
+    @include respond-to(desktop) {
+        height: auto;
+    }
+}
+.banner__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: $level3;
+    @include respond-to(desktop) {
+        width: 750px;
+        text-align: center;
+        margin: auto;
+    }
+    .ie10 & {
+        display: block;
+        @include center;
+        margin: 0;
+        height: auto;
+        @include respond-to(desktop) {
+            margin: 0;
+            max-width: 750px;
+        }
+    }
+    p {
+        @include font-size(26px, 28px);
+        color: white;
+        font-weight: 300;
+        @include respond-to(tablet) {
+            @include font-size(48px, 48px);
+        }
+    }
+}
+.banner__title {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: $level3;
+    @include font-size(26px, 28px);
+    color: white;
+    font-weight: 300;
+    @include respond-to(tablet) {
+        @include font-size(48px, 48px);
+    }
+}

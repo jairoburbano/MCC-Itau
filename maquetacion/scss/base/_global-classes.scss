@@ -1,0 +1,9 @@
+.wrap {
+	margin: auto;
+	max-width: cr(1280px);
+    width: 100%;
+    padding: 0 20px;
+    @include respond-to(desktop) {
+        padding: 0 40px;
+    }
+}

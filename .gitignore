@@ -1,0 +1,74 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Archivos de projecto de sublime #
+*.sublime-project
+*.sublime-workspace
+
+# cache de sass dentro del tema y la maquetación #
+/assets/themes/mcc-itau/.sass-cache/
+/maquetacion/scss/.sass-cache/
+
+
+# Cache de codekit #
+wp-content/themes/mcc-itau/.codekit-cache/
+config.codekit
+
+# Descargas de NPM #
+node_modules
+prepros-6.config
+
+# Descargas de Bower #
+bower_components
+
+# Carpetas de Wordpress que no necesitamos #
+/wordpress/assets/upgrade/
+/wordpress/assets/uploads/
+/wordpress/assets/plugins/duplicate-post/
+/wordpress/assets/backup-db/
+/wordpress/assets/advanced-cache.php
+/wordpress/assets/wp-cache-config.php
+/wordpress/assets/blogs.dir/
+*.log
+/wordpress/assets/cache/
+/wordpress/assets/backups/
+/wordpress/sitemap.xml.gz
+/wordpress/wp-include
+/wordpress/wp-admin
+/wordpress/index.php
+/wordpress/license.txt
+/wordpress/readme.html
+/wordpress/wp-activate.php
+/wordpress/wp-blog-header.php
+/wordpress/wp-comments-post.php
+/wordpress/wp-config-sample.php
+/wordpress/wp-config.php
+/wordpress/.htaccess
+/wordpress/wp-cron.php
+/wordpress/wp-includes/
+/wordpress/wp-links-opml.php
+/wordpress/wp-load.php
+/wordpress/wp-login.php
+/wordpress/wp-mail.php
+/wordpress/wp-settings.php
+/wordpress/wp-signup.php
+/wordpress/wp-trackback.php
+/wordpress/xmlrpc.php
+/wordpress/licencia.txt
+
+# Configuración de ambiente local de desarrollo #
+
+config/env/
+nbproject/
+/wordpress/assets/themes/mcc-itau/uploads/
+/wordpress/assets/themes/mcc-itau/assets/
+/wordpress/assets/themes/mcc-itau/bower_components/
+/wordpress/assets/plugins/timber-library/cache/

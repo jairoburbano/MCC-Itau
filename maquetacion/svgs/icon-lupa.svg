@@ -1,0 +1,13 @@
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In  -->
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+<defs>
+	<symbol  id="icon_x5F_search" viewBox="-8 -8 16 16">
+		<path id="XMLID_227_" d="M6.8-8C6.4-8,6.1-7.9,5.9-7.6L2.6-4.3C1.5-5.1,0.1-5.5-1.2-5.5C-5-5.5-8-2.5-8,1.2
+			S-5,8-1.2,8s6.8-3,6.8-6.8c0-1.4-0.4-2.7-1.2-3.8l3.3-3.3C7.9-6.1,8-6.4,8-6.8C8-7.4,7.4-8,6.8-8z M-1.2,6.7c-3,0-5.5-2.5-5.5-5.5
+			s2.5-5.5,5.5-5.5s5.5,2.5,5.5,5.5S1.8,6.7-1.2,6.7z"/>
+	</symbol>
+</defs>
+<use xlink:href="#icon_x5F_search"  width="16" height="16" id="XMLID_1_" x="-8" y="-8" transform="matrix(1 0 0 -1 8 8)" overflow="visible"/>
+</svg>

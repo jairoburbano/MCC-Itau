@@ -1,0 +1,301 @@
+/*------------------------------------*\
+$INFORMES
+\*------------------------------------*/
+.page-informes {
+    .container--informes {
+        margin-bottom: 15px;
+        @include respond-to(tablet) {
+            width: calc(100% - 230px);
+            padding-left: 25px;
+            margin-bottom: 40px;
+        }
+        @include respond-to(desktop) {
+            padding-left: 60px;
+            width: calc(100% - 280px);
+        }
+    }
+    .title {
+        @include respond-to(tablet) {
+            margin: 30px 0 20px 0;
+        }
+        @include respond-to(desktop) {
+            margin:40px 0;
+        }
+    }
+    .informe__item {
+        @include respond-to(tablet) {
+            width: calc(50% - 15px);
+        }
+        @include respond-to(desktop) {
+            width: calc(50% - 40px);
+        }
+    }
+}
+.container--sidebar {
+    @include respond-to(tablet) {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row-reverse wrap;
+    }
+}
+.form--sidebar {
+    padding-bottom: 40px;
+    @include respond-to(tablet) {
+        width: 230px;
+        padding-bottom: 0;
+        margin-top: -15px;
+    }
+    @include respond-to(desktop) {
+        width: 280px;
+    }
+}
+.container--informes {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin-bottom: 40px;
+    @include respond-to(desktop) {
+        margin-bottom: 55px;
+    }
+    .sub-title {
+        width: 100%;
+        @include respond-to(tablet) {
+            text-align: center;
+            margin-top: 40px;
+        }
+        @include respond-to(desktop) {
+            margin-top: 60px;
+            margin-bottom: 30px;
+        }
+    }
+    .btn {
+        @include respond-to(tablet) {
+            margin: auto;
+        }
+    }
+}
+.informe__item {
+    width: 100%;
+    margin-bottom: 25px;
+    display: block;
+    color: $darkgray;
+    @include respond-to(tablet) {
+        width: calc(33% - 20px);
+    }
+}
+.informe__meta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 100%;
+    border-bottom: 1px solid $gray;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    color: $darkgray;
+    svg {
+        width: 14px;
+        height: 14px;
+        fill: $gray;
+        margin-right: 5px;
+    }
+    p {
+        margin-bottom: 0;
+        @include font-size(14px, 14px);
+        margin-left: 5px;
+    }
+}
+.informe__user {
+    color: $secundario;
+    @include font-size(14px, 14px);
+}
+.informe__title a {
+    color: $main;
+    @include font-size(18px, 21px);
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+    transition: all $time;
+    @include respond-to(tablet) {
+        @include font-size(21px, 24px);
+        &:hover {
+            color: $secundario;
+        }
+    }
+}
+.paginador {
+    padding-top: 10px;
+    border-top: 1px solid $gray;
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: row wrap;
+    width: 100%;
+    li a{
+        width: 36px;
+        height: 36px;
+        border: 1px solid $gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $darkgray;
+        font-weight: 600;
+        transition: all $time;
+        margin-left: 10px;
+        @include respond-to(tablet) {
+            &:hover {
+                background: $secundario;
+                color: white;
+                border-color: $secundario;
+                svg {
+                    fill: white;
+                }
+            }
+        }
+        &.current {
+            background: $secundario;
+            color: white;
+            border-color: $secundario;
+        }
+        &.disable {
+            cursor: default;
+            @include respond-to(tablet) {
+                &:hover {
+                    background-color: transparent;
+                    border-color: $gray;
+                }
+            }
+            svg {
+                fill: $gray;
+            }
+        }
+    }
+    svg {
+        width: 7px;
+        height: 11px;
+        fill: $darkgray;
+        transition: all $time;
+    }
+}
+.buscador {
+    @include respond-to(tablet) {
+        width: 380px;
+        margin: auto;
+    }
+}
+.single-informes {
+    padding-top: 20px;
+    @include respond-to(tablet) {
+        padding-top: 30px;
+    }
+    @include respond-to(desktop) {
+        padding-top: 50px;
+    }
+    .title {
+        margin: 0 0 15px;
+        @include respond-to(tablet) {
+            text-align: left;
+        }
+    }
+}
+.single--top {
+    padding-bottom: 15px;
+    border-bottom: 1px solid $gray;
+    margin-bottom: 15px;
+    @include respond-to(tablet) {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+    }
+    @include respond-to(desktop) {
+        width: 790px;
+        margin: 0 auto 15px;
+    }
+    > .content {
+        @include respond-to(tablet) {
+            width: calc(100% - 280px);
+            padding-right: 30px;
+        }
+    }
+    h1 {
+        width: 100%;
+    }
+}
+.single--bottom {
+    padding-bottom: 40px;
+    display: none;
+    @include respond-to(tablet) {
+        width: 590px;
+        margin: auto;
+    }
+    .content {
+        padding-bottom: 15px;
+        border-bottom: 1px solid $gray;
+        margin-bottom: 15px;
+    }
+}
+.form--descarga {
+    background: $lightgray;
+    padding: 20px 15px;
+    margin-top: 15px;
+    @include respond-to(tablet) {
+        width: 280px;
+        margin-top: 0;
+        padding: 20px 20px 15px;
+    }
+    .sub-title {
+        margin-top: 0;
+        @include respond-to(tablet) {
+            @include font-size(24px, 24px);
+            margin-bottom: 15px;
+        }
+    }
+    .content {
+        margin-bottom: 30px;
+    }
+    input {
+        background: white;
+        &:focus {
+            background: white;
+        }
+    }
+    .checkbox-group {
+        margin-bottom: 3px;
+        &::before {
+            background: white;
+        }
+    }
+    .btn--nav {
+        background: $secundario;
+        color: white;
+        height: 36px;
+        width: 170px;
+        border-radius: 4px;
+        border: 0;
+        padding: 0;
+        margin: 0 0 20px;
+        transition: all $time;
+        &:focus {
+            background: $secundario;
+        }
+        &.btn--off {
+            background: $gray;
+            @include respond-to(tablet) {
+                &:hover {
+                    background: $gray;
+                }
+            }
+        }
+        @include respond-to(tabelt) {
+            &:hover {
+                background: $main;
+            }
+        }
+    }
+    a {
+        color: $darkgray;
+        @include font-size(14px, 20px);
+        text-decoration: underline;
+        display: block;
+    }
+}

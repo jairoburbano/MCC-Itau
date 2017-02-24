@@ -1,0 +1,44 @@
+/*------------------------------------*\
+$BTN
+\*------------------------------------*/
+.btn--fill {
+    display: inline-table;
+    height: 36px;
+    background: $secundario;
+    color: white !important;
+    width: 170px;
+    text-align: center;
+    line-height: cr(36px);
+    text-decoration: none !important;
+    border-radius: 4px;
+    transition: all $time;
+    font-size: 16px;
+    @include respond-to(tablet) {
+        &:hover {
+            background: $main;
+        }
+    }
+}
+.btn--nav {
+    display: inline-table;
+    height: 36px;
+    background: $gray;
+    width: 170px;
+    text-align: center;
+    line-height: cr(36px);
+    text-decoration: none !important;
+    border-radius: 4px;
+    transition: all $time;
+    margin: 0 5px;
+    color: $darkgray;
+    &.active {
+        background: $secundario;
+        color: white !important;
+    }
+    @include respond-to(tablet) {
+        &:hover {
+            background: $main;
+            color: white;
+        }
+    }
+}

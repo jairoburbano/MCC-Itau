@@ -1,0 +1,66 @@
+/*------------------------------------*\
+$INDEX
+\*------------------------------------*/
+.container--nosotros {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    @include respond-to(tablet) {
+        width: 600px;
+        margin: 0 auto 60px;
+    }
+    @include respond-to(desktop) {
+        width: 100%;
+        max-width: 1200px;
+    }
+    .btn--fill {
+        margin-top: 20px;
+        font-weight: 400;
+        @include respond-to(tablet) {
+            &:hover {
+                background: $gray;
+                color: $darkgray !important;
+            }
+        }
+    }
+}
+.nosotros__content {
+    width: 100%;
+    padding: 20px;
+    background: $lightgray;
+    @include font-size(18px, 22px);
+    font-weight: 300;
+    color: $darkgray;
+    @include respond-to(tablet) {
+        padding: 40px 65px;
+        @include font-size(21px, 24px);
+    }
+    @include respond-to(desktop) {
+        width: 50%;
+        padding: 60px;
+        transition: all $time;
+    }
+}
+.nosotros__title {
+    @include font-size(22px, 24px);
+    color: $secundario;
+    margin-bottom: 20px;
+    width: 100%;
+    display: block;
+    @include respond-to(tablet) {
+        @include font-size(32px, 32px);
+        transition: all $time;
+    }
+}
+.nosotros__media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include respond-to(desktop) {
+        width: 50%;
+    }
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
